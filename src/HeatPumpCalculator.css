@@ -1,0 +1,152 @@
+/* Modernes Styling für den Wärmepumpen-Rechner ohne CSS-Variablen */
+.heat-pump-calculator {
+    font-family: 'Roboto', sans-serif;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Flex-Container so einstellen, dass alle Zellen gleich hoch werden */
+.gjs-row {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch; /* Erzwingt gleiche Höhe der Kinder */
+    flex-wrap: nowrap;   /* Verhindert, dass die Zellen umbrechen */
+}
+
+/* Den Zellen eine Mindestbreite und -höhe zuweisen */
+.gjs-cell {
+    flex: 1;
+    min-width: 300px;   /* Beispielwert – je nach Bedarf anpassen */
+    min-height: 500px;  /* Beispielwert: sorgt dafür, dass beide Zellen immer mindestens 500px hoch sind */
+    box-sizing: border-box;
+}
+
+.gjs-cell-img{
+    flex: 1;
+    min-width: 300px;   /* Beispielwert – je nach Bedarf anpassen */
+    min-height: 500px;  /* Beispielwert: sorgt dafür, dass beide Zellen immer mindestens 500px hoch sind */
+    box-sizing: border-box;
+}
+
+.gjs-label {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color); /* Primärfarbe */
+}
+
+.gjs-p-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Formularelemente modern gestalten */
+.calculator-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-form .form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-form label {
+    font-size: 1.0rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color); /* Primärfarbe */
+}
+
+/* Eingabefelder und Auswahlfelder */
+.calculator-form input[type="text"],
+.calculator-form input[type="number"],
+.calculator-form select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.calculator-form input[type="text"]:focus,
+.calculator-form input[type="number"]:focus,
+.calculator-form select:focus {
+    outline: none;
+    border-color: var(--secondary-color); /* Sekundärfarbe */
+}
+
+/* Styling für small-Element (maximaler Wert) */
+.calculator-form small {
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column; /* Stellt die Elemente untereinander */
+    gap: 0.5rem; /* Abstand zwischen den Radio-Buttons, anpassbar */
+}
+
+
+.radio-group div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+/* Moderner Button-Stil */
+.calculator-form button {
+    padding: 0.75rem 2rem;
+    background-color: var(--primary-color); /* Primärfarbe */
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calculator-form button:hover {
+    background-color: var(--secondary-color); /* Sekundärfarbe */
+}
+
+/* Fehlermeldungen hervorheben */
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    border: 1px solid #D8000C;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 768px) {
+    .heat-pump-calculator {
+        padding: 1.5rem;
+    }
+    .gjs-row {
+        flex-direction: column;
+    }
+}
