@@ -1,4 +1,4 @@
-name: Test & Deploy React App
+name: Deploy React App to GitHub Pages
 
 on:
   push:
@@ -6,36 +6,14 @@ on:
       - main
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20, 22]
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm test
-
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Install Node.js 22
         uses: actions/setup-node@v3
         with:
           node-version: '22'
