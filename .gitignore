@@ -134,3 +134,20 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Node.js & React Build Files
+dist/
+build/
+
+# Betriebssystem-spezifische Dateien
+.DS_Store
+Thumbs.db
+
+# IDE/Editor Dateien
+.vscode/
+.idea/
+*.iml
+
+# GitHub Pages Deployment (falls du gh-pages nutzt)
+.gitignore
+
