@@ -6,7 +6,7 @@ const App: React.FC = () => {
     useEffect(() => {
         // Prüfe, ob der session_token bereits in den Cookies vorhanden ist.
         if (!document.cookie.includes("session_token=")) {
-            fetch("http://localhost:8080/set-cookie", {
+            fetch("http://best-heatpump.api.rocketquack.eu:8080/set-cookie", {
                 method: "GET",
                 credentials: "include", // Damit werden Cookies vom Server verarbeitet
             })

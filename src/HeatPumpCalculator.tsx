@@ -165,7 +165,7 @@ const HeatPumpCalculator: React.FC = () => {
         }
 
         // Sende das JSON an den FastAPI-Server (Endpoint anpassen)
-        fetch('http://localhost:8080/v1/waermepumpe/berechnen', {
+        fetch('http://best-heatpump.api.rocketquack.eu:8080/v1/waermepumpe/berechnen', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
